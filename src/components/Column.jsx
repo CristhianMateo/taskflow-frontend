@@ -4,7 +4,6 @@ function Column({ title, tasks, onCambiarEstado, onEliminar }) {
   return (
     <div className="column">
       <h3>{title}</h3>
-
       {tasks.map((task) => (
         <TaskCard
           key={task.id}

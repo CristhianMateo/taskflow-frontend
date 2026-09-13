@@ -1,0 +1,26 @@
+/* Encabezado del tablero, con el botón de logout (Paso 0, Sesión 7) */
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #dfe1e6;
+}
+
+.app-header h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.btn-logout {
+  background: transparent;
+  color: var(--color-danger);
+  border: 1px solid var(--color-danger);
+}
+
+.btn-logout:hover {
+  background: var(--color-danger);
+  color: white;
+}

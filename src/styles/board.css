@@ -1,0 +1,96 @@
+/* Estilos del tablero Kanban: columnas, tarjetas de tarea y badges de estado */
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.board form {
+  flex-basis: 100%;
+  display: flex;
+  gap: 8px;
+}
+
+.board input {
+  flex: 1;
+}
+
+.column {
+  flex: 1;
+  min-width: 220px;
+  background: #ebecf0;
+  border-radius: var(--radius);
+  padding: 12px;
+  min-height: 200px;
+}
+
+.column h3 {
+  margin-top: 0;
+}
+
+.task-card {
+  background: white;
+  border-radius: 6px;
+  border-left: 4px solid #b0bec5;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.2s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.task-card.en_progreso {
+  border-left-color: #42a5f5;
+}
+
+.task-card.completada {
+  border-left-color: #66bb6a;
+}
+
+.task-card h4 {
+  margin: 0 0 6px;
+}
+
+.task-card button:not(.btn-eliminar) {
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  color: white;
+}
+
+.badge.pendiente {
+  background: #b0bec5;
+}
+
+.badge.en_progreso {
+  background: #42a5f5;
+}
+
+.badge.completada {
+  background: #66bb6a;
+}
+
+.btn-eliminar {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 14px;
+  margin-left: 6px;
+  padding: 4px;
+}
+
+.btn-eliminar:hover {
+  background: rgba(239, 68, 68, 0.1);
+}
